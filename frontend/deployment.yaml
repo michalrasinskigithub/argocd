@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  namespace: default
+  labels:
+    app: frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - name: front
+        image: 192.168.44.44:8082/docker_registry/frontend:latest
+        ports:
+        - containerPort: 5000
+        env:
+        - name: BACKEND_URL
+          value: backend-service:5001
+      imagePullSecrets:
+      - name: regcred
