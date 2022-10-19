@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: 192.168.44.44:8082/docker-local/backend:latest
+        image: 192.168.44.44:8082/docker_registry/backend:latest
         ports:
         - containerPort: 5001
       imagePullSecrets:

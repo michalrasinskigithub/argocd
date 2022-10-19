@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: front
-        image: 192.168.44.44:8082/docker-local/frontend:latest
+        image: 192.168.44.44:8082/docker_registry/frontend:latest
         ports:
         - containerPort: 5000
         env:
