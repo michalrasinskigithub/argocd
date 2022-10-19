@@ -6,6 +6,7 @@ metadata:
     argocd-image-updater.argoproj.io/frontend.update-strategy: latest
     argocd-image-updater.argoproj.io/write-back-method: argocd
   name: backend
+  namespace: argocd
 spec:
   destination:
     name: ''
